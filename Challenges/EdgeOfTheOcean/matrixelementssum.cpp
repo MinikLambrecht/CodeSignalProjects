@@ -3,11 +3,14 @@
 
 int matrixElementsSum(std::vector<std::vector<int>> matrix)
 {
+    // Initialize a new integer to store the total cost in.
     auto cost = 0;
 
-    for (int i = 0; i < matrix[0].size(); i++)
+    // Iterate through the matrix, and add up the price.
+    // If the price above or below is 0, ignore the number.
+    for (size_t i = 0; i < matrix[0].size(); i++)
     {
-        for (int j = 0; j < matrix.size(); j++)
+        for (size_t j = 0; j < matrix.size(); j++)
         {
             if(matrix[j][i] == 0)
             {

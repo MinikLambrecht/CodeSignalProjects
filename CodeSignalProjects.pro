@@ -16,13 +16,19 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-    Challenges/almostincreasingsequence.cpp \
+    Challenges/EdgeOfTheOcean/adjacentelementsproduct.cpp \
+    Challenges/EdgeOfTheOcean/almostincreasingsequence.cpp \
+    Challenges/EdgeOfTheOcean/makearrayconsecutive2.cpp \
+    Challenges/EdgeOfTheOcean/matrixelementssum.cpp \
+    Challenges/EdgeOfTheOcean/shapearea.cpp \
+    Challenges/TheJourneyBegins/add.cpp \
+    Challenges/TheJourneyBegins/centuryfromyear.cpp \
+    Challenges/TheJourneyBegins/checkpalindrome.cpp \
     Challenges/allchallenges.cpp \
-    Challenges/add.cpp \
-    Challenges/centuryfromyear.cpp \
-    Challenges/checkpalindrome.cpp \
-    Challenges/adjacentelementsproduct.cpp \
-    Challenges/shapearea.cpp
+    Challenges/SmoothSailing/alllongeststrings.cpp \
+    Challenges/SmoothSailing/commoncharactercount.cpp \
+    tests.cpp \
+    Challenges/SmoothSailing/islucky.cpp
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
