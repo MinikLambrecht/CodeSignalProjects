@@ -14,3 +14,4 @@
 #include <Challenges/SmoothSailing/alllongeststrings.cpp>
 #include <Challenges/SmoothSailing/commoncharactercount.cpp>
 #include <Challenges/SmoothSailing/islucky.cpp>
+#include <Challenges/SmoothSailing/sortbyheight.cpp>

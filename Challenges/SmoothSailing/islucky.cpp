@@ -1,25 +1,37 @@
 #include <iostream>
 
-bool isLucky(int n)
+// Create a method to calculate the sum with.
+int sum(std::string str)
 {
-    const int Base = 10;
+        // Initialize an integer to store the final result in.
+        int res = 0;
 
-    auto fh = 0;
-    auto sh = 0;
-
-    for (size_t i = 0; i < sizeof(n); i++ )
-    {
-        auto divisor = Base;
-        while (n / divisor > divisor )
+        // Iterate through the string and add up the number to the res integer.
+        for (size_t i = 0; i < str.size(); i++)
         {
-            divisor *= Base;
+                res += str[i] - '0';
         }
 
-        fh = n / divisor;
-        sh = n % divisor;
-    }
+        // Return the sum of the number.
+        return res;
+}
 
+bool isLucky(int n)
+{
+        // Convert the number to a string and store it.
+        auto nstr = std::to_string(n);
 
+        // Get the first half of the string and store it.
+        auto fh = nstr.substr(0, (int)(nstr.length() / 2));
 
-    std::cout << "First Half: " << std::to_string(fh) << std::endl << "Second Half: " << std::to_string(sh);
+        // Get the second half of the string and store it.
+        auto sh = nstr.substr((int)(nstr.length() / 2), (int)(nstr.length() / 2));
+
+       // Compare the two sums and return the final result.
+       if (sum(fh) == sum(sh))
+       {
+               return true;
+       }
+
+       return false;
 }
