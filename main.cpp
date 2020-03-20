@@ -2,10 +2,6 @@
 
 void RunTest(int n)
 {
-        std::vector<std::string> strVec;
-        std::vector<int> intVec;
-        std::vector<std::vector<int>> intMatrixVec;
-
         switch(n)
         {
                 case 1:
@@ -103,6 +99,22 @@ void RunTest(int n)
                         SortByHeightTest(4, {4, 2, 9, 11, 2, 16});
                         SortByHeightTest(5, {2, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1});
                         break;
+
+                case 13:
+                        ReverseInParenthesesTest(1, "(bar)");
+                        ReverseInParenthesesTest(2, "foo(bar)baz");
+                        ReverseInParenthesesTest(3, "foo(bar)baz(blim)");
+                        ReverseInParenthesesTest(4, "foo(bar(baz))blim");
+                        ReverseInParenthesesTest(5, "");
+                        break;
+
+                case 14:
+                        AlternatingSumsTest(1, {50, 60, 60, 45, 70});
+                        AlternatingSumsTest(2, {100, 50});
+                        AlternatingSumsTest(3, {80});
+                        AlternatingSumsTest(4, {100, 50, 50, 100});
+                        AlternatingSumsTest(5, {100, 51, 50, 100});
+                        break;
         }
 }
 
@@ -110,7 +122,7 @@ int main()
 {
         // Run tests on challenges, the number parameter is according to CodeSignals Challenge number.
         // There will always be 5 tests if possible.
-        RunTest(1);
+        RunTest(14);
 
         return 0;
 }

@@ -2,8 +2,6 @@
 #include <iostream>
 #include <vector>
 
-
-
 void AddTest(int test, int n1, int n2, std::string eo)
 {
         auto res = add(n1, n2);
@@ -34,9 +32,9 @@ void CenturyFromYearTest(int test, int year)
                              << std::endl;
 }
 
-void CheckPalindromeTest(int test, std::string str)
+void CheckPalindromeTest(int test, std::string input)
 {
-        auto res =  checkPalindrome(str);
+        auto res =  checkPalindrome(input);
 
         std::cout << "Check Palindrome Test #" + std::to_string(test)
                              << std::endl
@@ -158,6 +156,42 @@ void SortByHeightTest(int test, std::vector<int> vec)
         vec = sortByHeight(vec);
 
         std::cout << "Sort By Height Test #" + std::to_string(test)
+                             << std::endl
+                             << "Output: ";
+
+        for(size_t i = 0; i < vec.size(); i++)
+        {
+                if (i <= 0)
+                {
+                        std::cout << vec[i];
+                }
+                else
+                {
+                         std::cout << ", " << vec[i];
+                }
+        }
+
+        std::cout << std::endl
+                         << std::endl;
+}
+
+void ReverseInParenthesesTest(int test, std::string inputStr)
+{
+        auto res = reverseInParentheses(inputStr);
+
+        std::cout << "Reverse In Parentheses Test #" + std::to_string(test)
+                             << std::endl
+                             << "Output: "
+                             << res
+                             << std::endl
+                             << std::endl;
+}
+
+void AlternatingSumsTest(int test, std::vector<int> vec)
+{
+        vec = alternatingSums(vec);
+
+        std::cout << "Alternating Sums Test #" + std::to_string(test)
                              << std::endl
                              << "Output: ";
 
