@@ -19,3 +19,4 @@
 
 // Exploring The Waters
 #include <Challenges/ExploringTheWaters/alternatingsums.cpp>
+#include <Challenges/ExploringTheWaters/addborder.cpp>
