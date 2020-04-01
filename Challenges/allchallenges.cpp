@@ -20,3 +20,9 @@
 // Exploring The Waters
 #include <Challenges/ExploringTheWaters/alternatingsums.cpp>
 #include <Challenges/ExploringTheWaters/addborder.cpp>
+#include <Challenges/ExploringTheWaters/aresimilar.cpp>
+#include <Challenges/ExploringTheWaters/arraychange.cpp>
+#include <Challenges/ExploringTheWaters/palindromerearranging.cpp>
+
+// Island Of Knowledge
+#include <Challenges/IslandOfKnowledge/areequallystrong.cpp>

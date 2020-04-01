@@ -156,6 +156,30 @@ void RunTest(int n)
                                                           "*wzy***",
                                                           "*******"});
                         break;
+
+                case 16:
+                        AreSimilarTest(1, {1, 2, 3}, {1, 2, 3}, true);
+                        AreSimilarTest(2, {1, 2, 3}, {2, 1, 3}, true);
+                        AreSimilarTest(3, {1, 2, 2}, {2, 1, 1}, false);
+                        AreSimilarTest(4, {1, 1, 4}, {1, 2, 3}, false);
+                        AreSimilarTest(5, {1, 2, 3}, {1, 10, 2}, false);
+                        break;
+
+                case 17:
+                        ArrayChangeTest(1, {1, 1, 1}, 3);
+                        ArrayChangeTest(2, {-1000, 0, -2, 0}, 5);
+                        ArrayChangeTest(3, {2, 1, 10, 1}, 12);
+                        ArrayChangeTest(4, {2, 3, 3, 5, 5, 5, 4, 12, 12, 10, 15}, 13);
+                        ArrayChangeTest(5, {3122, -645, 2616, 13213, -8069}, 25559);
+                        break;
+
+                case 18:
+                        AreEquallyStrongTest(1, 10, 15, 10, 15, true);
+                        AreEquallyStrongTest(2, 15, 10, 15, 10, true);
+                        AreEquallyStrongTest(3, 15, 10, 15, 9, false);
+                        AreEquallyStrongTest(4, 10, 5, 5, 10, true);
+                        AreEquallyStrongTest(5, 10, 15, 5, 20, false);
+                        break;
         }
 }
 
@@ -163,7 +187,7 @@ int main()
 {
         // Run tests on challenges, the number parameter is according to CodeSignals Challenge number.
         // There will always be 5 tests if possible.
-        RunTest(15);
+        RunTest(18);
 
         return 0;
 }

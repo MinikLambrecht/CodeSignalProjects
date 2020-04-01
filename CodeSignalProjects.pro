@@ -17,6 +17,10 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     Challenges/ExploringTheWaters/addborder.cpp \
     Challenges/ExploringTheWaters/alternatingsums.cpp \
+    Challenges/ExploringTheWaters/aresimilar.cpp \
+    Challenges/ExploringTheWaters/arraychange.cpp \
+    Challenges/ExploringTheWaters/palindromerearranging.cpp \
+    Challenges/IslandOfKnowledge/areequallystrong.cpp \
     Challenges/SmoothSailing/reverseinparentheses.cpp \
     Challenges/SmoothSailing/sortbyheight.cpp \
         main.cpp \

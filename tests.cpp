@@ -387,3 +387,67 @@ void AddBorderTest(int test, std::vector<std::string> vec, std::vector<std::stri
         std::cout << std::endl
                          << std::endl;
 }
+
+void AreSimilarTest(int test, std::vector<int> vecA, std::vector<int> vecB, bool eo)
+{
+        auto res = areSimilar(vecA, vecB);
+
+        std::cout << "Are Similar Test #" + std::to_string(test)
+                         << std::endl
+                         << std::endl
+                         << "Expected Output: "
+                         << std::endl
+                         << std::boolalpha
+                         << eo
+                         << std::endl
+                         << std::endl
+                         << "Output: "
+                         << std::endl
+                         << std::boolalpha
+                         << res
+                         << std::endl
+                         << std::endl
+                         << std::endl;
+}
+
+void ArrayChangeTest(int test, std::vector<int> vec, int eo)
+{
+        auto res = arrayChange(vec);
+
+        std::cout << "Array Change Test #" + std::to_string(test)
+                         << std::endl
+                         << std::endl
+                         << "Expected Output: "
+                         << std::endl
+                         << std::to_string(eo)
+                         << std::endl
+                         << std::endl
+                         << "Output: "
+                         << std::endl
+                         << std::to_string(res)
+                         << std::endl
+                         << std::endl
+                         << std::endl;
+}
+
+void AreEquallyStrongTest(int test, int yourLeft, int yourRight, int friendsLeft, int friendsRight, bool eo)
+{
+        auto res = areEquallyStrong(yourLeft, yourRight, friendsLeft, friendsRight);
+
+        std::cout << "Are Equally Strong Test #" + std::to_string(test)
+                         << std::endl
+                         << std::endl
+                         << "Expected Output: "
+                         << std::endl
+                         << std::boolalpha
+                         << eo
+                         << std::endl
+                         << std::endl
+                         << "Output: "
+                         << std::endl
+                         << std::boolalpha
+                         << res
+                         << std::endl
+                         << std::endl
+                         << std::endl;
+}
