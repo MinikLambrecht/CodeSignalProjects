@@ -21,6 +21,11 @@ SOURCES += \
     Challenges/ExploringTheWaters/arraychange.cpp \
     Challenges/ExploringTheWaters/palindromerearranging.cpp \
     Challenges/IslandOfKnowledge/areequallystrong.cpp \
+    Challenges/IslandOfKnowledge/arraymaximaladjacentdifference.cpp \
+    Challenges/IslandOfKnowledge/avoidobstacles.cpp \
+    Challenges/IslandOfKnowledge/boxblur.cpp \
+    Challenges/IslandOfKnowledge/isipv4address.cpp \
+    Challenges/IslandOfKnowledge/minesweeper.cpp \
     Challenges/SmoothSailing/reverseinparentheses.cpp \
     Challenges/SmoothSailing/sortbyheight.cpp \
         main.cpp \

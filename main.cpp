@@ -180,6 +180,38 @@ void RunTest(int n)
                         AreEquallyStrongTest(4, 10, 5, 5, 10, true);
                         AreEquallyStrongTest(5, 10, 15, 5, 20, false);
                         break;
+
+                case 19:
+                        ArrayMaximalAdjacentDifferenceTest(1, {2, 4, 1, 0}, 3);
+                        ArrayMaximalAdjacentDifferenceTest(2, {1, 1, 1, 1}, 0);
+                        ArrayMaximalAdjacentDifferenceTest(3, {-1, 4, 10, 3, -2}, 7);
+                        ArrayMaximalAdjacentDifferenceTest(4, {10, 11, 13}, 2);
+                        ArrayMaximalAdjacentDifferenceTest(5, {-2, -2, -2, -2, -2}, 0);
+                        break;
+
+                case 20:
+                        IsIPV4AddressTest(1, "172.16.254.1", true);
+                        IsIPV4AddressTest(2, "172.316.254.1", false);
+                        IsIPV4AddressTest(3, ".254.255.0", false);
+                        IsIPV4AddressTest(4, "1.1.1.1a", false);
+                        IsIPV4AddressTest(5, "1", false);
+                        break;
+
+                case 21:
+                        AvoidObstacleTest(1, {5, 3, 6, 7, 9}, 4);
+                        AvoidObstacleTest(2, {2, 3}, 4);
+                        AvoidObstacleTest(3, {1, 4, 10, 6, 2}, 7);
+                        AvoidObstacleTest(4, {1000, 999}, 6);
+                        AvoidObstacleTest(5, {19, 32, 11, 23}, 3);
+                        break;
+
+                case 22:
+                        BoxBlurTest(1, {{1, 1, 1}, {1, 7, 1}, {1, 1, 1}}, {{1}});
+                        BoxBlurTest(2, {{0, 18, 9}, {27, 9, 0}, {81 ,63, 45}}, {{28}});
+                        BoxBlurTest(3, {{36, 0, 18, 9}, {27, 54, 9, 0}, {81, 63, 72, 45}}, {{40, 30}});
+                        BoxBlurTest(4, {{7, 4, 0, 1}, {5, 6, 2, 2}, {6, 10, 7, 8}, {1, 4, 2, 0}}, {{5, 4}, {4, 4}});
+                        BoxBlurTest(5, {{36, 0, 18, 9, 9, 45, 27}, {27, 0, 54, 9, 0, 63, 90}, {81, 63, 72, 45, 18, 27, 0}, {0, 0, 9, 81, 27, 18, 45}, {45, 45, 27, 27, 90, 81, 72}, {45, 18, 9, 0, 9, 18, 45}, {27, 81, 36, 63, 63, 72, 81}}, {{39, 30, 26, 25, 31}, {34, 37, 35, 32, 32}, {38, 41, 44, 46, 42}, {22, 24, 31, 39, 45}, {37, 34, 36, 47, 59}});
+                        break;
         }
 }
 
@@ -187,7 +219,7 @@ int main()
 {
         // Run tests on challenges, the number parameter is according to CodeSignals Challenge number.
         // There will always be 5 tests if possible.
-        RunTest(18);
+        RunTest(22);
 
         return 0;
 }

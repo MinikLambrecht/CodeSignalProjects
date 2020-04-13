@@ -174,7 +174,8 @@ void AllLongStringsTest(int test, std::vector<std::string> vec, std::vector<std:
                          << std::endl
                          << std::endl
                          << "Expected Output: "
-                         << std::endl;
+                         << std::endl
+                         << "[";
 
         for(size_t i = 0; i < eo.size(); i++)
         {
@@ -188,10 +189,12 @@ void AllLongStringsTest(int test, std::vector<std::string> vec, std::vector<std:
                 }
         }
 
-        std::cout << std::endl
+        std::cout << "]"
+                         << std::endl
                          << std::endl
                          << "Output: "
-                         << std::endl;
+                         << std::endl
+                         << "[";
 
         for(size_t i = 0; i < vec.size(); i++)
         {
@@ -205,7 +208,8 @@ void AllLongStringsTest(int test, std::vector<std::string> vec, std::vector<std:
                 }
         }
 
-        std::cout << std::endl
+        std::cout << "]"
+                         << std::endl
                          << std::endl
                          << std::endl;
 }
@@ -260,7 +264,8 @@ void SortByHeightTest(int test, std::vector<int> vec, std::vector<int> eo)
                          << std::endl
                          << std::endl
                          << "Expected Output: "
-                         << std::endl;
+                         << std::endl
+                         << "[";
 
         for(size_t i = 0; i < eo.size(); i++)
         {
@@ -274,10 +279,12 @@ void SortByHeightTest(int test, std::vector<int> vec, std::vector<int> eo)
                 }
         }
 
-        std::cout << std::endl
+        std::cout << "]"
+                         << std::endl
                          << std::endl
                          << "Output: "
-                         << std::endl;
+                         << std::endl
+                         << "[";
 
         for(size_t i = 0; i < vec.size(); i++)
         {
@@ -291,7 +298,8 @@ void SortByHeightTest(int test, std::vector<int> vec, std::vector<int> eo)
                 }
         }
 
-        std::cout << std::endl
+        std::cout << "]"
+                         << std::endl
                          << std::endl
                          << std::endl;
 }
@@ -324,7 +332,8 @@ void AlternatingSumsTest(int test, std::vector<int> vec, std::vector<int> eo)
                          << std::endl
                          << std::endl
                          << "Expected Output: "
-                         << std::endl;
+                         << std::endl
+                         << "[";
 
         for(size_t i = 0; i < eo.size(); i++)
         {
@@ -338,10 +347,12 @@ void AlternatingSumsTest(int test, std::vector<int> vec, std::vector<int> eo)
                 }
         }
 
-        std::cout << std::endl
+        std::cout << "]"
+                         << std::endl
                          << std::endl
                          << "Output: "
-                         << std::endl;
+                         << std::endl
+                         << "[";
 
         for(size_t i = 0; i < vec.size(); i++)
         {
@@ -355,7 +366,8 @@ void AlternatingSumsTest(int test, std::vector<int> vec, std::vector<int> eo)
                 }
         }
 
-        std::cout << std::endl
+        std::cout << "]"
+                         << std::endl
                          << std::endl
                          << std::endl;
 }
@@ -447,6 +459,146 @@ void AreEquallyStrongTest(int test, int yourLeft, int yourRight, int friendsLeft
                          << std::endl
                          << std::boolalpha
                          << res
+                         << std::endl
+                         << std::endl
+                         << std::endl;
+}
+
+void ArrayMaximalAdjacentDifferenceTest(int test, std::vector<int> vec, int eo)
+{
+        auto res = arrayMaximalAdjacentDifference(vec);
+
+        std::cout << "Array Maximal Adjacent Difference Test #" + std::to_string(test)
+                         << std::endl
+                         << std::endl
+                         << "Expected Output: "
+                         << std::endl
+                         << std::to_string(eo)
+                         << std::endl
+                         << std::endl
+                         << "Output: "
+                         << std::endl
+                         << std::to_string(res)
+                         << std::endl
+                         << std::endl
+                         << std::endl;
+}
+
+void IsIPV4AddressTest(int test, std::string str, bool eo)
+{
+        auto res = isIPv4Address(str);
+
+        std::cout << "Is IPv4 Address Test #" + std::to_string(test)
+                         << std::endl
+                         << std::endl
+                         << "Expected Output: "
+                         << std::endl
+                         << std::boolalpha
+                         << eo
+                         << std::endl
+                         << std::endl
+                         << "Output: "
+                         << std::endl
+                         << std::boolalpha
+                         << res
+                         << std::endl
+                         << std::endl
+                         << std::endl;
+}
+
+void AvoidObstacleTest(int test, std::vector<int> vec, int eo)
+{
+        auto res = avoidObstacles(vec);
+
+        std::cout << "Avoid Obstacle Test #" + std::to_string(test)
+                         << std::endl
+                         << std::endl
+                         << "Expected Output: "
+                         << std::endl
+                         << std::to_string(eo)
+                         << std::endl
+                         << std::endl
+                         << "Output: "
+                         << std::endl
+                         << std::to_string(res)
+                         << std::endl
+                         << std::endl
+                         << std::endl;
+}
+
+void BoxBlurTest(int test, std::vector<std::vector<int>> matrix, std::vector<std::vector<int>> eo)
+{
+        matrix = boxBlur(matrix);
+
+        int matrixRows =  matrix.size();
+        int eoRows = eo.size();
+
+        int matrixCols =matrix[0].size();
+        int eoCols = eo[0].size();
+
+        std::cout << "Alternating Sums Test #" + std::to_string(test)
+                         << std::endl
+                         << std::endl
+                         << "Expected Output: "
+                         << std::endl
+                         << "[";
+
+        for (int i = 0; i < eoRows; i++)
+        {
+                std:: cout << "[";
+
+                for (int j = 0; j < eoCols; j++)
+                {
+                        if (j <= 0)
+                        {
+                                std::cout << eo[i][j];
+                        }
+                        else
+                        {
+                                std::cout << ", " << eo[i][j];
+                        }
+                }
+
+                std::cout << "]";
+
+                if (eoRows > 1 && i < eoRows - 1)
+                {
+                        std::cout << std::endl << " ";
+                }
+        }
+
+        std::cout << "]"
+                         << std::endl
+                         << std::endl
+                         << "Output: "
+                         << std::endl
+                         << "[";
+
+        for (int i = 0; i < matrixRows; i++)
+        {
+                std:: cout << "[";
+
+                for (int j = 0; j < matrixCols; j++)
+                {
+                        if (j <= 0)
+                        {
+                                std::cout << matrix[i][j];
+                        }
+                        else
+                        {
+                                std::cout << ", " << matrix[i][j];
+                        }
+                }
+
+                std::cout << "]";
+
+                if (matrixRows > 1 && i < matrixRows - 1)
+                {
+                        std::cout << std::endl << " ";
+                }
+        }
+
+        std::cout << "]"
                          << std::endl
                          << std::endl
                          << std::endl;

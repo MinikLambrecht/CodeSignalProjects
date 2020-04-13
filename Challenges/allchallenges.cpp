@@ -26,3 +26,7 @@
 
 // Island Of Knowledge
 #include <Challenges/IslandOfKnowledge/areequallystrong.cpp>
+#include <Challenges/IslandOfKnowledge/arraymaximaladjacentdifference.cpp>
+#include <Challenges/IslandOfKnowledge/isipv4address.cpp>
+#include <Challenges/IslandOfKnowledge/avoidobstacles.cpp>
+#include <Challenges/IslandOfKnowledge/boxblur.cpp>
